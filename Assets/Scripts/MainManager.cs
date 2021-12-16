@@ -38,7 +38,10 @@ public class MainManager : MonoBehaviour
             }
         }
 
-        BestScoreText.text = $"Best Score: {GameManager.Instance.highestScorer} - {GameManager.Instance.highScore}";
+        if (GameManager.Instance != null)
+        {
+            BestScoreText.text = $"Best Score: {GameManager.Instance.highestScorer} - {GameManager.Instance.highScore}";
+        }
     }
 
     private void Update()
